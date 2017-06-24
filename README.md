@@ -21,7 +21,7 @@ There are two main options for customizing static headers for TableViews:
 - tableView(_ tableView: UITableView, viewForHeaderInSection section: Int)
 - tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
 
-willDisplayHeaderView on the other hand provides the default view and allows for modification of it. Simple appearance modifications are fairly straight forward. Adding interactive features such as buttons is a bit more complicated, and is the focus of this demo.
+willDisplayHeaderView provides the default view and allows for modification of it. Simple appearance modifications are fairly straight forward. Adding interactive features such as buttons is a bit more complicated, and is the focus of this demo.
 
 viewForHeaderInSection returns the view for the header, which can be loaded from a nib or created entirely in code. One disadvantage of this is that it gives no access to the default appearance of headers, and Apple only provides access to one default (UIColor.groupTableViewBackground). A good example of using a nib file can be found at http://samwize.com/2015/11/06/guide-to-customizing-uitableview-section-header-footer/
 
