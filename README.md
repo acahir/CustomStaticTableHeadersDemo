@@ -8,6 +8,14 @@ Clone or download this repository and run. Developed and tested in Xcode 8.2.1 a
 
 ## Description
 
+This demo grew out of several UI design goals for a project:
+- "Select All" functionality to quickly mark all rows in a section as "checked" (could be a checkmark accessory, UISwitch, etc)
+- "Show/Hide" functionality to allow a single View to provide a simple "overview" by sections while still presenting access to details inside sections. 
+
+As both of these related to the section groupings, the headers were a logical choice for adding this functionality.
+
+### Access to Static Headers
+
 There are two main options for customizing static headers for TableViews:
 
 - tableView(_ tableView: UITableView, viewForHeaderInSection section: Int)
@@ -20,6 +28,18 @@ viewForHeaderInSection returns the view for the header, which can be loaded from
 ### Dynamic Tables
 
 Most of what this demo does can also be accomplished using dynamic tables and prototyle cells. This allows a great deal of flexibility, but it also requires a data source setup, and sometimes a static table is a better choice for straightforward needs. A good demo of this can be found at https://www.youtube.com/watch?v=6CX2kJExI_M.
+
+## Implementation Details
+
+### Adding Buttons to Static Headers
+
+The biggest challenges was working around the fact that static header cells can be reused by the TableView. So if one is modified, for example by adding a button, then when it is reused a second button could be added. This is only a problem if the TableView is large enough to scrolll off screen, but should be guarded against as the results can be tough to track down.
+
+If multiple buttons are added to a header, some mechanism to identify each button is needed. The UIButton.tag is one option, but in the demo that field is used to identify which section to act on. Instead, the UIButton.currentTitle is used to differentiate between them. Another option would be to use the tag string to include two pieces of information.
+
+### Show/Hide Rows
+
+Once a button is added to the header, this implemntation is fairly straight forward. The current display status of each section is stored in a array of bools, which feels like a quick and dirty solution to me, but works.  
 
 ## Limitations & Next Steps
 
