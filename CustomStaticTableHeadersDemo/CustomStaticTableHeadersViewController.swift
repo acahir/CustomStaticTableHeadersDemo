@@ -11,7 +11,7 @@ import UIKit
 class CustomStaticTableHeadersViewController: UITableViewController {
 
   // track current section visibility
-  var sectionVisibility = [true, true, true]
+  var sectionVisibility = [true, true, true, true, true]
 
   
   /*  willDisplayHeaderView is used to customize the existing header view. 
