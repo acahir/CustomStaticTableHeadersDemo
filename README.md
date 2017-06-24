@@ -59,7 +59,7 @@ In trying to customize static TableView headers, I looked through many online po
 
 This demo was build up on top of the work of several others. Below is an incomplete list:
 
-- [Customizing Appearance wtih Static TableViews](https://stackoverflow.com/questions/31680941/how-to-customise-header-section-in-static-cell)
+- [Customizing Header Appearance wtih Static TableViews](https://stackoverflow.com/questions/31680941/how-to-customise-header-section-in-static-cell)
 - [Show/Hide rows](https://stackoverflow.com/questions/8260267/uitableview-set-to-static-cells-is-it-possible-to-hide-some-of-the-cells-progra)
 - [Custom Headers with Dynamic TableViews](https://www.youtube.com/watch?v=6CX2kJExI_M)
 
